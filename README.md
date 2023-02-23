@@ -45,18 +45,17 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## Instrucciones a seguir para levantar el back
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
+1. Clonar proyecto
+2. ```npm i```
+3. Clonar el archivo ```.env.template``` y renombrar a ```.env```
+4. Cambiar las varaibles de entorno
+5. Levantar la base de datos
+  ```
+  docker-compose up -d
+  ```
+6. Levantar ```npm run start:dev```
 
 ## Support
 
