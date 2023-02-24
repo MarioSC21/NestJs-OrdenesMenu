@@ -100,6 +100,15 @@ export class CategoriaService {
     }
   }
 
+  async deleteAllCategoria() {
+    const query = await this.categoriaRepository.createQueryBuilder('categoria')
+    try {
+      return await query.delete().where({}).execute()
+    } catch (error) {
+      this.handleError(error)
+    }
+  }
+
   private handleError(error: any) {
     if (error.code === '23505') {
       throw new BadRequestException(error.detail)

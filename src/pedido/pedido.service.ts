@@ -136,6 +136,11 @@ export class PedidoService {
     }
   }
 
+  async deleteAllPedido() {
+    const query = await this.pedidoRepository.createQueryBuilder('pedido')
+    return await query.delete().where({}).execute()
+  }
+
   private handleError(error: any) {
     console.log(error)
     if (error.code === '23505') {

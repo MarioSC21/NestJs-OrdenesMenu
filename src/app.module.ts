@@ -7,6 +7,7 @@ import { PlatoModule } from './plato/plato.module'
 import { CloudinaryModule } from './cloudinary/cloudinary.module'
 import { PedidoModule } from './pedido/pedido.module'
 import { AuthModule } from './auth/auth.module'
+import { SeedModule } from './seed/seed.module'
 
 @Module({
   imports: [
@@ -31,7 +32,10 @@ import { AuthModule } from './auth/auth.module'
     PlatoModule,
     CloudinaryModule,
     PedidoModule,
-    AuthModule
-  ]
+    AuthModule,
+    SeedModule
+  ],
+  controllers: [],
+  providers: []
 })
 export class AppModule {}

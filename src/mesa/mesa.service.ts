@@ -24,6 +24,7 @@ export class MesaService {
   async create(createMesaDto: CreateMesaDto) {
     try {
       const { mesa_cap, mesa_nro } = createMesaDto
+
       const mesa = this.mesaRepository.create({ mesa_cap, mesa_nro })
       await this.mesaRepository.save(mesa)
       return mesa
@@ -71,6 +72,15 @@ export class MesaService {
     return {
       message: 'Mesa eliminada',
       mesa
+    }
+  }
+
+  async deleteAllMesa() {
+    const query = await this.mesaRepository.createQueryBuilder('mesa')
+    try {
+      return await query.delete().where({}).execute()
+    } catch (error) {
+      this.handleError(error)
     }
   }
 

@@ -71,6 +71,13 @@ export class PedidoPlatoService {
     }
   }
 
+  async deleteAllPedidoPlato() {
+    const query = await this.pedidoPlatoRepository.createQueryBuilder(
+      'pedidoPlato'
+    )
+    return await query.delete().where({}).execute()
+  }
+
   private handleError(error: any) {
     console.log(error)
     if (error.code === '23505') {

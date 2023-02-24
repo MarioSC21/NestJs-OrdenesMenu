@@ -45,7 +45,7 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Instrucciones a seguir para levantar el back
+## Instrucciones a seguir para levantar el back en modo desarrollo
 
 1. Clonar proyecto
 2. ```npm i```
@@ -56,6 +56,16 @@ $ npm run start:prod
   docker-compose up -d
   ```
 6. Levantar ```npm run start:dev```
+7. Llenar con datos ficticios la base de datos con el endpoint 
+  ```
+  /seed
+
+  #Ejemplo
+  http://[::1]:3500/seed
+  ```
+  Este edpoint elimina primero toda la base de datos incuido las imagenes alojadas de cloudinary y despues los llena con los datos
+  que se encuentran en carpeta **seed/data/seed.data** -> donde se puede agregar, eliminar y modificar los datos
+
 
 ## Support
 

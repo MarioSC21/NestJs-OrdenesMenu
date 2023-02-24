@@ -209,6 +209,24 @@ export class PlatoService {
       })
   }
 
+  async deleteAllPlato() {
+    const query = this.platoRepository.createQueryBuilder('plato')
+    const queryImage = this.imagenesRepository.createQueryBuilder('imagenes')
+    try {
+      const platoDelete = await query.delete().where({}).execute()
+      const imageDelete = await queryImage.delete().where({}).execute()
+
+      // eliminar todas las imagenes de cloudinary
+      await this.cloudinary.deleteAllImages()
+      return {
+        platoDelete,
+        imageDelete
+      }
+    } catch (error) {
+      this.handleError(error)
+    }
+  }
+
   private handleError(error: any) {
     // console.log(error)
     if (error.code === '23505') {
