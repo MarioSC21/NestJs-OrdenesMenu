@@ -45,7 +45,7 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Instrucciones a seguir para levantar el back en modo desarrollo
+## Instrucciones a seguir para levantar la aplicacion en modo desarrollo
 
 1. Clonar proyecto
 2. ```npm i```
