@@ -66,17 +66,3 @@ $ npm run start:prod
   Este edpoint elimina primero toda la base de datos incuido las imagenes alojadas de cloudinary y despues los llena con los datos
   que se encuentran en carpeta **seed/data/seed.data** -> donde se puede agregar, eliminar y modificar los datos
 
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
